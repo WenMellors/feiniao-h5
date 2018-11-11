@@ -1,0 +1,69 @@
+/*declaration of action*/
+@keyframes fadeout{ /* 1s */
+	0% {opacity: 1}
+	25% {opacity: 0.75}
+	50% {opacity: 0.5}
+	75% {opacity: 0.25}
+	100% {
+		opacity: 0;
+		margin: 0;
+		height: 0px;
+	}
+}
+
+@keyframes floatin{ /* 2s */
+	0% {
+		opacity: 0; 
+		margin-top: 27%;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 20%;
+	}
+}
+
+/*end of declaration*/
+div.fadeout{
+	margin-top: 20%;
+	width: 100%;
+	height: auto;
+	float: left;
+	animation-name: fadeout;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	/*Chrome and Safari*/
+	-webkit-animation-name: fadeout;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+}
+
+div.floatin{
+	margin-top: 20%;
+	width: 100%;
+	height: auto;
+	float: left;
+
+	animation-name: floatin;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	/*Chrome Safari*/
+	-webkit-animation-name: floatin;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: both;
+}

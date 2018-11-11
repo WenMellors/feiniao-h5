@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>飞鸟</title>
+<link href="css/animation.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script>
+	var choice = [0,0,0,0]; // the answer of each question
+	function monitor(step,choose) { 
+	// monitor the change of div, step is the symbol of which state the edge is at, and choice indicate what they choose
+		choice[step-1] = choose;
+		// change div
+		var div1 = document.getElementById('div1');
+		var div2 = document.getElementById('div2');
+		if(step == 1){
+			div1.className = "fadeout";
+			div2.className = "floatin";
+		}
+		else if(step == 4){
+			if(choice[0] == 1 && choice[1] != 3 && choice[2] !=2 && choice[3] != 4){ // A class
+
+			} 
+		}
+	}
+</script>
+</head>
+<body>
+<div style="width: 100%;height: 100%;display: block;">
+	<div class="display" id="div1"> 
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;">
+				<font size="+5">
+					恶霸爱摸鱼，第一次能摸1条鱼，第二次能摸2条鱼，第n次能摸的鱼的数量是n*第n-1次摸鱼的数量，问恶霸第n次能摸多少鱼？
+				</font>
+			</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,1)">A.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,2)">A.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,3)">A.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,4)">A.1</p>
+	</div>
+	<div class="notdisplay" id="div2"> 
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;">
+				<font size="+5">
+					ruaaa, ruaaa
+				</font>
+			</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,1)">A.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,2)">B.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,3)">C.1</p>
+			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,4)">D.1</p>
+	</div>
+</div>
+</body>
+</html>
