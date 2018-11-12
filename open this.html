@@ -5,6 +5,7 @@
 <title>飞鸟</title>
 <link href="css/animation.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<audio src="css/music/bgsound.mp3" autoplay="true" loop="true" ></audio>
 <script>
 	var choice = [0,0,0,0]; // the answer of each question, choice[0] -> A, choice[1] -> B, choice[2] is the choice of div9, choice[3] is the choice of div10
 	var random = Math.random(1);
@@ -63,6 +64,7 @@
 		else{ // choose img
 			choice[3] = choose - 1;
 			div10.style.display = "none";
+			document.body.style.backgroundAttachment = "scroll";
 			if(choice[2] == 1 && choice[3] == 1){ // classic
 				var x = Math.floor(random * 2); // x = 0, 1
 				if(x == 0) document.body.style.backgroundImage = "url('css/img/classic/1.jpg')"; // stupid, rails nb!
@@ -83,76 +85,76 @@
 </script>
 </head>
 <body>
-<div style="width: 100%;height: 100%;display: block;">
+<div style="width: 100%;height: 100%;display: block;font-family: STLiti;">
 	<div class="display" id="div1"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					有趣的灵魂如你，会怎么度过难得的独处时间？
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,1)">A．晒晒太阳读读书</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(1,2)">B．唱歌跳舞出去玩</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(1,1)">A．晒晒太阳读读书</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(1,2)">B．唱歌跳舞出去玩</p>
 	</div>
 	<div class="notdisplay" id="div2"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					社交场合里的你总是——
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,1)">A. 热闹是他们的，我安享我的寂寞</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(2,2)">B. 活跃的 social queen</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(2,1)">A. 热闹是他们的，我安享我的寂寞</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(2,2)">B. 活跃的 social queen</p>
 	</div>
 	<div class="notdisplay" id="div3"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					走在上课路上时，你会：
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(3,1)">A. 沉寂在自己的世界</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(3,2)">B. 与朋友边聊边走 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(3,1)">A. 沉寂在自己的世界</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(3,2)">B. 与朋友边聊边走 </p>
 	</div>
 	<div class="notdisplay" id="div4"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					逃不过水逆的你，总是——：
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(4,1)">A. 人间不值得，一个人静静</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(4,2)">B．丧就要大声说出口，让世界听到我的难过</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(4,1)">A. 人间不值得，一个人静静</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(4,2)">B．丧就要大声说出口，让世界听到我的难过</p>
 	</div>
 	<div class="notdisplay" id="div5"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					最近是否为一部电视、电影感动而哭泣？
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(5,1)">A. 是</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(5,2)">B. 否</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(5,1)">A. 是</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(5,2)">B. 否</p>
 	</div>
 	<div class="notdisplay" id="div6"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					如果现在有两种乐器摆在你面前，你觉得你的目光最先聚焦在：
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(6,1)">A. 钢琴 </p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(6,2)">B. 架子鼓 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(6,1)">A. 钢琴 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(6,2)">B. 架子鼓 </p>
 	</div>
 	<div class="notdisplay" id="div7"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					广播站放了一首充满节奏感的歌，你会：
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(7,1)">A. 把动感留在心里，外表的我还是水一样的淡漠</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(7,2)">B．随节奏舞动，专属bgm里我是绝对center</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(7,1)">A. 把动感留在心里，外表的我还是水一样的淡漠</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(7,2)">B．随节奏舞动，专属bgm里我是绝对center</p>
 	</div>
 	<div class="notdisplay" id="div8"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					如果条件允许，你想去哪里旅行？
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(8,1)">A. 在巴厘岛的沙滩上晒太阳</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(8,2)">B. 去澳门塔蹦极</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(8,1)">A. 在巴厘岛的沙滩上晒太阳</p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(8,2)">B. 去澳门塔蹦极</p>
 	</div>
 	<div class="notdisplay" id="div9"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					平安夜，约会的时光，_____才是你眼中的虐狗圣地
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(9,1)">A. 气氛浪漫的咖啡屋 </p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(9,2)">B. 剧院 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(9,1)">A. 气氛浪漫的咖啡屋 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(9,2)">B. 剧院 </p>
 	</div>
 	<div class="notdisplay" id="div10"> 
-			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 50px;">
+			<p style="margin-left: 8%;width: 84%;word-break: break-all;font-size: 70px;">
 					今天你为什么点开了音乐播放器？
 			</p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(10,1)">A. 放松心情 </p>
-			<p style="font-size: 40px; margin-left: 8%" onclick="monitor(10,2)">B. 追求艺术 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(10,1)">A. 放松心情 </p>
+			<p style="font-size: 65px; margin: 8%; word-break: break-all;" onclick="monitor(10,2)">B. 追求艺术 </p>
 	</div>
 </div>
 </body>
