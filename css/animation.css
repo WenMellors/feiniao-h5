@@ -3,7 +3,6 @@
 	0% {opacity: 1}
 	25% {
 		opacity: 0.75;
-		height: 200px;
 	}
 	50% {opacity: 0.5}
 	75% {opacity: 0.25}
