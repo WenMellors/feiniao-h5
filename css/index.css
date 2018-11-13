@@ -35,3 +35,8 @@ p.answer{
 	margin: 8%; 
 	word-break: break-all;
 }
+@font-face
+{
+	font-family: myfont;
+	src: url('STLiti.ttf');
+}
