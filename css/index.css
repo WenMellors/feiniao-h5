@@ -1,5 +1,6 @@
 div.display{
-	margin-top: 20%;
+	position: absolute;
+	top: 10%;
 	width: 100%;
 	height: auto;
 	float: left;
@@ -13,15 +14,21 @@ div.notdisplay{
 	float:left;
 }
 
+div.head{
+	position: absolute;
+	top: 30%;
+	text-align: center;
+}
+
 body{
 	width: 100%;
     height: auto;
     margin: 0;
 	overflow: hidden;
 	display:block;
-	background-image: url(img/background.jpg); 
+	background-image: url(img/1.jpg); 
 	background-repeat: no-repeat; 
-	background-size: 100%;
+	background-size: cover;
 	background-attachment: fixed;
 }
 p.title{
@@ -39,4 +46,9 @@ p.answer{
 {
 	font-family: myfont;
 	src: url('STLiti.ttf');
+}
+@font-face
+{
+	font-family: english;
+	src: url('Ariandi.ttf');
 }
