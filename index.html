@@ -6,6 +6,7 @@
 <link href="css/animation.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 <audio src="css/music/bgsound.mp3" autoplay="true" loop="true" ></audio>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <script>
 	var choice = [0,0,0,0]; // the answer of each question, choice[0] -> A, choice[1] -> B, choice[2] is the choice of div9, choice[3] is the choice of div10
 	var random = Math.random(1);
@@ -30,87 +31,102 @@
 		var div8 = document.getElementById('div8');
 		var div9 = document.getElementById('div9');
 		var div10 = document.getElementById('div10');
+		var div11 = document.getElementById('div11');
+		var picture = document.getElementById('picture');
 		if (step == 0){
+			document.body.style.backgroundImage = "url('css/img/2.jpg')";
 			div0.className = "fadeout1";
 			div1.className = "floatin";
 		}
 		else if(step == 1){
-			document.body.style.backgroundImage = "url('css/img/2.jpg')";
+			div0.style.display = "none";
 			div1.className = "fadeout";
 			div2.className = "floatin";
 			img2.src = "css/img/3.jpg";
 		}
 		else if(step == 2){
+			div1.style.display = "none";
+			document.body.style.backgroundImage = "url('css/img/3.jpg')";
 			div2.className = "fadeout";
 			div3.className = "floatin";
-			img2.src = "css/img/5.jpg";
-		}
-		else if(step == 3){
-			document.body.style.backgroundImage = "url('css/img/3.jpg')";
-			div3.className = "fadeout";
-			div4.className = "floatin";
 			img2.src = "css/img/4.jpg";
 		}
+		else if(step == 3){
+			div2.style.display = "none";
+			div3.className = "fadeout";
+			div4.className = "floatin";
+			img2.src = "css/img/5.jpg";
+		}
 		else if(step == 4){
+			div3.style.display = "none";
 			document.body.style.backgroundImage = "url('css/img/4.jpg')";
 			div4.className = "fadeout";
 			div5.className = "floatin";
 			img2.src = "css/img/6.jpg";
 		}
 		else if(step == 5){
-			document.body.style.backgroundImage = "url('css/img/5.jpg')";
+			div4.style.display = "none";
 			div5.className = "fadeout";
 			div6.className = "floatin";
-			img2.src = "css/img/7.jpg";
 		}
 		else if (step == 6){
+			div5.style.display = "none";
+			document.body.style.backgroundImage = "url('css/img/5.jpg')";
 			div6.className = "fadeout";
 			div7.className = "floatin";
 		}
 		else if(step == 7){
-			document.body.style.backgroundImage = "url('css/img/6.jpg')";
+			div6.style.display = "none";
 			div7.className = "fadeout";
 			div8.className = "floatin";
 		}
 		else if(step == 8){
+			div7.style.display = "none";
+			document.body.style.backgroundImage = "url('css/img/6.jpg')";
 			div8.className = "fadeout";
 			div9.className = "floatin";
 		}
 		else if(step == 9){
-			document.body.style.backgroundImage = "url('css/img/7.jpg')";
+			div8.style.display = "none";
 			div9.className = "fadeout";
 			div10.className = "floatin";
 			choice[2] = choose - 1;
 		}
 		else{ // choose img
 			choice[3] = choose - 1;
+			div9.style.display = "none";
 			div10.style.display = "none";
+			div11.className = "display";
 			if(choice[0] >= 6){ // soft
 				if(choice[2]==1&&choice[3]==1){
 					var x = Math.floor(random * 6);
-					var img1 = ["url('css/img/soft+classic/1.jpg')","url('css/img/soft+classic/2.jpg')","url('css/img/soft+classic/3.jpg')","url('css/img/soft+classic/4.jpg')","url('css/img/soft+classic/5.jpg')","url('css/img/soft+classic/6.jpg')"];
+					var img1 = ["css/img/soft+classic/1.jpg","css/img/soft+classic/2.jpg","css/img/soft+classic/3.jpg","css/img/soft+classic/4.jpg","css/img/soft+classic/5.jpg","css/img/soft+classic/6.jpg"];
 					if(x==6) x = 5;
-					document.body.style.backgroundImage = img1[x];
+					picture.src = img1[x];
+					document.body.style.backgroundImage = "none";
 				}
 				else{
-					var img1 = ["url('css/img/soft/1.jpg')","url('css/img/soft/2.jpg')","url('css/img/soft/3.jpg')","url('css/img/soft/4.jpg')","url('css/img/soft/5.jpg')","url('css/img/soft/6.jpg')","url('css/img/soft/7.jpg')","url('css/img/soft/8.jpg')","url('css/img/soft/9.jpg')","url('css/img/soft/10.jpg')","url('css/img/soft/11.jpg')","url('css/img/soft/12.jpg')","url('css/img/soft/13.jpg')","url('css/img/soft/14.jpg')","url('css/img/soft/15.jpg')","url('css/img/soft/16.jpg')","url('css/img/soft/17.jpg')","url('css/img/soft/18.jpg')","url('css/img/soft/19.jpg')","url('css/img/soft/20.jpg')"];
+					var img1 = ["css/img/soft/1.jpg","css/img/soft/2.jpg","css/img/soft/3.jpg","css/img/soft/4.jpg","css/img/soft/5.jpg","css/img/soft/6.jpg","css/img/soft/7.jpg","css/img/soft/8.jpg","css/img/soft/9.jpg","css/img/soft/10.jpg","css/img/soft/11.jpg","css/img/soft/12.jpg","css/img/soft/13.jpg","css/img/soft/14.jpg","css/img/soft/15.jpg","css/img/soft/16.jpg","css/img/soft/17.jpg","css/img/soft/18.jpg","css/img/soft/19.jpg","css/img/soft/20.jpg"];
 					var x = Math.floor(random * 20);
 					if(x==20) x = 19;
-					document.body.style.backgroundImage = img1[x];
+					picture.src = img1[x];
+					document.body.style.backgroundImage = "none";
 				}
 			}
 			else{ // Rhythm
 				if(choice[2]==1&&choice[3]==1){ // rhythm+classic
 					var x = Math.floor(random * 10);
-					var img1 = ["url('css/img/rhythm+classic/1.jpg')","url('css/img/rhythm+classic/2.jpg')","url('css/img/rhythm+classic/3.jpg')","url('css/img/rhythm+classic/4.jpg')","url('css/img/rhythm+classic/5.jpg')","url('css/img/rhythm+classic/6.jpg')","url('css/img/rhythm+classic/7.jpg')","url('css/img/rhythm+classic/8.jpg')","url('css/img/rhythm+classic/9.jpg')","url('css/img/rhythm+classic/10.jpg')"];
+					var img1 = ["css/img/rhythm+classic/1.jpg","css/img/rhythm+classic/2.jpg","css/img/rhythm+classic/3.jpg","css/img/rhythm+classic/4.jpg","css/img/rhythm+classic/5.jpg","css/img/rhythm+classic/6.jpg","css/img/rhythm+classic/7.jpg","css/img/rhythm+classic/8.jpg","css/img/rhythm+classic/9.jpg","css/img/rhythm+classic/10.jpg"];
 					if(x==10) x = 9;
-					document.body.style.backgroundImage = img1[x];	
+					picture.src = img1[x];
+					document.body.style.backgroundImage = "none";
 				}
 				else{
 					var x = Math.floor(random * 24);
-					var img1 = ["url('css/img/rhythm/1.jpg')","url('css/img/rhythm/2.jpg')","url('css/img/rhythm/3.jpg')","url('css/img/rhythm/4.jpg')","url('css/img/rhythm/5.jpg')","url('css/img/rhythm/6.jpg')","url('css/img/rhythm/7.jpg')","url('css/img/rhythm/8.jpg')","url('css/img/rhythm/9.jpg')","url('css/img/rhythm/10.jpg')","url('css/img/rhythm/11.jpg')","url('css/img/rhythm/12.jpg')","url('css/img/rhythm/13.jpg')","url('css/img/rhythm/14.jpg')","url('css/img/rhythm/15.jpg')","url('css/img/rhythm/16.jpg')","url('css/img/rhythm/17.jpg')","url('css/img/rhythm/18.jpg')","url('css/img/rhythm/19.jpg')","url('css/img/rhythm/20.jpg')","url('css/img/rhythm/21.jpg')","url('css/img/rhythm/22.jpg')","url('css/img/rhythm/23.jpg')","url('css/img/rhythm/24.jpg')"];
+					var img1 = ["css/img/rhythm/1.jpg","css/img/rhythm/2.jpg","css/img/rhythm/3.jpg","css/img/rhythm/4.jpg","css/img/rhythm/5.jpg","css/img/rhythm/6.jpg","css/img/rhythm/7.jpg","css/img/rhythm/8.jpg","css/img/rhythm/9.jpg","css/img/rhythm/10.jpg","css/img/rhythm/11.jpg","css/img/rhythm/12.jpg","css/img/rhythm/13.jpg","css/img/rhythm/14.jpg","css/img/rhythm/15.jpg","css/img/rhythm/16.jpg","css/img/rhythm/17.jpg","css/img/rhythm/18.jpg","css/img/rhythm/19.jpg","css/img/rhythm/20.jpg","css/img/rhythm/21.jpg","css/img/rhythm/22.jpg","css/img/rhythm/23.jpg","css/img/rhythm/24.jpg"];
 					if(x == 24) x = 23;
-					document.body.style.backgroundImage = img1[x];	
+					picture.src = img1[x];
+					document.body.style.backgroundImage = "none";	
 				}
 			}
 		}
@@ -120,10 +136,10 @@
 <body>
 <div style="width: 100%;height: 100%;display: block;font-family: myfont;">
 	<div class="head" id="div0" onclick="monitor(0,0)"> 
-			<p class="title" style="font-size: 80px; margin-bottom: 10px; ">
+			<p class="title" style="font-size: 25px; margin-bottom: 10px; ">
 					什么样的音乐，能读懂你的内心和耳朵？
 			</p>
-			<p style="font-size: 60px; margin: 0;"> press to continue ....</p>
+			<p style="font-size: 20px; margin: 0;"> press to continue ....</p>
 	</div>
 	<div class="notdisplay" id="div1"> 
 			<p class="title">
@@ -194,6 +210,9 @@
 			</p>
 			<p class="answer" onclick="monitor(10,1)">A. 放松心情 </p>
 			<p class="answer" onclick="monitor(10,2)">B. 追求艺术 </p>
+	</div>
+	<div class="notdisplay" id="div11">
+		<img src="" id="picture">		
 	</div>
 </div>
 </body>
